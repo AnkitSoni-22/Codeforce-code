@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class ABagain {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        for(int i=0;i<num;i++){
+            int n=sc.nextInt();
+            int dig1 = n%10;
+            n=n/10;
+            int dig2 = n%10;
+            System.out.println(dig1+dig2);
+        }
+        sc.close();
+    }
+}
