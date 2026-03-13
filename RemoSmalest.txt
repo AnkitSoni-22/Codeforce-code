@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class removeSmallest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        for(int i=0;i<num;i++){
+            int n = sc.nextInt();
+            int arr[] = new int[n];
+            for(int j=0;j<n;j++){
+                arr[j]=sc.nextInt();
+            }
+            Arrays.sort(arr);
+            boolean possible = true;
+            for (int j = 1; j < n; j++) {
+                if (arr[j] - arr[j - 1] > 1) {
+                    possible = false;
+                    break;
+                }
+            }
+            if (possible) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+        sc.close();
+    }
+}
