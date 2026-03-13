@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class vasyaHipster {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int countSingle=0;
+        int countDouble=0;
+        while(a>0 && b>0){
+            countDouble++;
+            a--;
+            b--;
+        }
+        if(a>0){
+            while(a-2>=0){
+                countSingle++;
+                a=a-2;
+            }
+        }
+        if(b>0){
+            while(b-2>=0){
+                countSingle++;
+                b=b-2;
+            }
+        }
+        System.out.println(countDouble+" "+countSingle);
+        sc.close();
+    }
+}
