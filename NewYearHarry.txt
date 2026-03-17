@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class newYearHurry {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int remaining_time = 240-k;
+        int solved=0;
+        for(int i=1;i<=n;i++){
+            int time = 5*i;
+            if(remaining_time-time>=0){
+                solved++;
+                remaining_time-=time;
+            }
+        }
+        System.out.println(solved);
+        sc.close();
+    }
+}
