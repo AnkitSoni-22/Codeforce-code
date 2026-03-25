@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class division {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        for(int i=0;i<num;i++){
+            int rating = sc.nextInt();
+            if(rating>=1900){
+                System.out.println("Division 1");
+            }
+            else if(1899>=rating && rating>=1600){
+                System.out.println("Division 2");
+            }
+            else if(1599>=rating && rating>=1400){
+                System.out.println("Division 3");
+            }
+            else if(rating<=1399){
+                System.out.println("Division 4");
+            }
+        }
+        sc.close();
+    }
+}
