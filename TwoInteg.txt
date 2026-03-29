@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class twoInteger {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        for(int i=0;i<num;i++){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            int diff = Math.abs(a-b);
+            int q = diff/10;
+            int rem = diff%10;
+            if(rem!=0){
+                q++;
+            }
+            System.out.println(q);
+        }
+        sc.close();
+    }
+}
